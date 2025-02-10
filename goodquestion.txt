@@ -1,0 +1,13 @@
+Understanding the myUsing method signature
+
+I want to make sure I'm understanding what the method signature is saying. For the method signature from ControlStructures.scala:
+
+```
+def myUsing[T <: { def close(): Unit }, U](resource: T)
+```
+
+What I'm clear on: This defines the method myUsing, which utilizes generic types T and U. U has no type constraints, and can be virtually anything. The method myUsing takes a single parameter named resource of type T.
+
+What I'm not so clear on: Type T is the subtype of anything that is able to run the method close() that returns a value of type Unit. That is, any implementation of type T must have an implementation of the method close() that returns type Unit. As best as I can tell, Unit is roughly equivalent to a void return type in other languages.
+
+Follow-up: Assuming that any type T must implement the method close(), isn't this equivalent to saying T <: Closeable? And why would you not just say that?

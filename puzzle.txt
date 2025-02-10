@@ -1,0 +1,9 @@
+It is a little known fact, for the purposes of this puzzler, that potatoes are 99% water and only 1% potato. Or 1% dry matter, the stuff that makes a potato a potato. 
+
+So, imagine you were to take 100 pounds of potatoes and you set them out on your back porch to dry out. You leave them out in the sun. When you do this, they will start to dry out. 
+
+As they dry out, of course the water begins to evaporate. And after a while enough water has evaporated so that the potatoes are now 98% water.
+
+If you were to weigh those potatoes at that moment, when they are 98% water, how much would the entire pile of potatoes weigh?
+
+(Credit to Car Talk)
