@@ -1,4 +1,4 @@
-package edu.uic.cs474.spring25.inclass.encapsulation
+package edu.uic.cs474.spring25.inclass.moregenerics
 
 // For more information on writing tests, see
 // https://scalameta.org/munit/docs/getting-started.html

@@ -1,4 +1,4 @@
-package edu.uic.cs474.spring25.inclass.troubleshooting
+package edu.uic.cs474.spring25.inclass.moregenerics
 
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop.*
