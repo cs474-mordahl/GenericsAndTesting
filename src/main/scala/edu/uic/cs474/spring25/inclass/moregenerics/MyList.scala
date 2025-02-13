@@ -16,10 +16,13 @@ sealed trait MyList[+T]:
       * | head = 2, tail = (3, 4)
       *   | head = 3, tail = (4)
       *     | head = 4, tail = EmptyList
-      *       |
-      *       4
-      *   | (4, 3)
-      * | (4, 3, 2)
+      *       | EmptyList.reverse().append(4)
+      *         | EmptyList.append(4)
+      *         > 4
+      *       > 4
+      *     > 4
+      *   > (4, 3)
+      * > (4, 3, 2)
       * (4, 3, 2, 1)
       */
     this match
