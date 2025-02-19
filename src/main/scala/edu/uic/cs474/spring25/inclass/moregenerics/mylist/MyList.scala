@@ -1,4 +1,4 @@
-package secret.spring25.inclass.moregenerics.mylist
+package edu.uic.cs474.spring25.inclass.moregenerics.mylist
 
 /** A simple list trait to provide common list operations.
   *
