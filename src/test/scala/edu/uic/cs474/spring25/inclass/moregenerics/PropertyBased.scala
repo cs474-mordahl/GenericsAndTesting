@@ -4,21 +4,16 @@ import munit.ScalaCheckSuite
 import org.scalacheck.Prop.*
 
 class IntegerSuite extends ScalaCheckSuite:
-
+  /** Checks that addition is commutative for lots of generated i and js.
+    */
   property("addition is commutative"):
-    forAll: (n1: Int, n2: Int) =>
-      n1 + n2 == n2 + n1
+    forAll: (i: Int, j: Int) =>
+      assertEquals(i + j, j + i)
 
-  property("0 is the identity of addition"):
-    forAll: (n: Int) =>
-      n + 0 == n
-
-  property("subtraction is commutative"):
-    forAll: (n1: Int, n2: Int) =>
-      n1 - n2 == n2 - n1
-
-  property("subtration is associative"):
-    forAll: (n1: Int, n2: Int, n3: Int) =>
-      (n1 - n2) - n3 == n1 - (n2 - n3)
+  /** Determines that subtraction is not commutative.
+    */
+  property("subtraction is not commutative".fail):
+    forAll: (i: Int, j: Int) =>
+      assertEquals(i - j, j - i)
 
 end IntegerSuite

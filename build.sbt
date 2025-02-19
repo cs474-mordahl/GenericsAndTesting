@@ -3,11 +3,12 @@ val scala3Version = "3.6.3"
 lazy val root = project
   .in(file("."))
   .settings(
-    name              := "GenericsAndTesting",
-    version           := "0.1.0-SNAPSHOT",
-    scalaVersion      := scala3Version,
-    semanticdbEnabled := true,
-    semanticdbVersion := scalafixSemanticdb.revision,
+    name                   := "GenericsAndTesting",
+    version                := "0.1.0-SNAPSHOT",
+    scalaVersion           := scala3Version,
+    semanticdbEnabled      := true,
+    semanticdbVersion      := scalafixSemanticdb.revision,
+    Compile / doc / target := file("docs"),
     scalacOptions ++= Seq(
       "-Wunused:all"
     ),
