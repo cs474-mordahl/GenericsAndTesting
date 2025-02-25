@@ -23,8 +23,8 @@ class MyTreeTests extends ScalaCheckSuite:
       def nodeGenerator: Gen[MyTree[T]] = Gen.sized: size =>
         for
           v         <- arbitrary[T]
-          leftTree  <- Gen.sized((z: Int) => Gen.resize(z - 1, treeGenerator))
-          rightTree <- Gen.sized((z: Int) => Gen.resize(z - 1, treeGenerator))
+          leftTree  <- Gen.sized((z: Int) => Gen.resize(z / 2, treeGenerator))
+          rightTree <- Gen.sized((z: Int) => Gen.resize(z / 2, treeGenerator))
         yield Node(v, leftTree, rightTree)
 
       // This is the generator we will use to generate trees.
@@ -35,13 +35,18 @@ class MyTreeTests extends ScalaCheckSuite:
           // Gen.oneOf(nodeGenerator, leafGenerator)
 
           // Bias the generator to create larger trees.
-          Gen.frequency((9, nodeGenerator), (1, leafGenerator))
+          Gen.frequency(9 -> nodeGenerator, 1 -> leafGenerator)
       )
+
       treeGenerator
 
   property("Every tree terminates in a leaf node"):
+
     forAll: (t: MyTree[Int]) =>
+      println(t.length)
       assert(endsInLeafs(t))
+
     forAll: (t: MyTree[String]) =>
+      println(t.length)
       assert(endsInLeafs(t))
 end MyTreeTests
