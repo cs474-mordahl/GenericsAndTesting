@@ -1,4 +1,4 @@
-package edu.uic.cs474.spring25.inclass.moregenerics.mylist
+package mylist
 
 class MyListsTests extends munit.FunSuite:
   test("MyList allows you to prepend elements."):

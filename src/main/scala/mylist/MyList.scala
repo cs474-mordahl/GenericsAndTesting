@@ -1,4 +1,4 @@
-package edu.uic.cs474.spring25.inclass.moregenerics.mylist
+package mylist
 
 /** A simple list trait to provide common list operations.
   *
@@ -221,8 +221,7 @@ end MyList
   * @param head
   *   The first element of the list.
   * @param tail
-  *   The [[edu.uic.cs474.spring25.inclass.moregenerics.mylist.MyList MyList]]
-  *   that represents the end of the list.
+  *   The [[mylist.MyList MyList]] that represents the end of the list.
   */
 final case class NonEmptyList[+T](head: T, tail: MyList[T]) extends MyList[T]
 
